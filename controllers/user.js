@@ -60,6 +60,5 @@ export const getMyProfile = async (req, res) => {
     });
   } catch (error) {
     next(error);
-    F;
   }
 };

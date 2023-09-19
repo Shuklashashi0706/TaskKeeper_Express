@@ -15,7 +15,15 @@ config({
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
-
+// app.all("*", function (req, res) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header(
+//     "Access-Control-Allow-Headers",
+//     "Content-Type,Content-Length, Authorization, Accept,X-Requested-With"
+//   );
+//   res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,OPTIONS");
+//   res.header("Access-Control-Allow-Credentials", true);
+// });
 //using routes
 app.use("/users/api/v1", userRouter);
 app.use("/task/api/v1", taskRouter);
